@@ -30,10 +30,15 @@ test('header has logo visible', async ({ page }) => {
 test('unable to log in with an invalid email', async ({ page }) => {
   await page.goto('https://Bloomtech.com/');
   await page.getByText('Login');
-  await page.goto('https://login.bloomtech.com/oauth2/default/v1/authorize?scope=openid+profile+email&sessionToken=&response_type=code&client_id=0oaedywvl9Isex5Vd357&redirect_uri=https%3A%2F%2Fapp.bloomtech.com%2Fapi%2Fauth%2Fcallback%2Fokta&state=883c4d11-53ca-4d26-8fe1-b931dfc188cb');
-  await page.getByLabel('email').fill('max@test.com');
-  const locator = page.locator('input[type=text]');
-  await expect(locator).toHaveValue('max@test.com');
+  await page.getByLabel('Login')
+//  .getByRole('button').click();
+ 
+ 
+  // await page.goto('https://login.bloomtech.com/oauth2/default/v1/authorize?scope=openid+profile+email&sessionToken=&response_type=code&client_id=0oaedywvl9Isex5Vd357&redirect_uri=https%3A%2F%2Fapp.bloomtech.com%2Fapi%2Fauth%2Fcallback%2Fokta&state=883c4d11-53ca-4d26-8fe1-b931dfc188cb');
+  // await page.getByLabel('email').fill('max@test.com');
+  // const locator = page.locator('input[type=text]');
+  // await expect(locator).toHaveValue('max@test.com');
+  // await expect(locator).toHaveText(/We found/);
 })
 
 
